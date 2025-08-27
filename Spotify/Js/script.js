@@ -7,7 +7,7 @@ let currFolder;
    ====================== */
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`http://127.0.0.1:5500/Spotify/Songs/${folder}/`);
+  let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -261,7 +261,7 @@ function initVolumeControls() {
    MAIN
    ====================== */
 async function main() {
-  await getSongs("songs/ncs");
+  await getSongs("songs/");
   if (songs.length > 0) {
     playMusic(songs[0], true);
   }
