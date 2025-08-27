@@ -7,7 +7,7 @@ let currFolder;
    ====================== */
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`https://fazaleammar.github.io/Spotify/${folder}/`);
+  let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -73,7 +73,7 @@ let playMusic = (track, pause = false) => {
    ALBUM HANDLING
    ====================== */
 async function displayAlbums() {
-  let a = await fetch(`https://fazaleammar.github.io/Spotify/songs/`);
+  let a = await fetch(`http://127.0.0.1:5500/songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -94,9 +94,7 @@ async function displayAlbums() {
 async function renderAlbumCard(folder) {
   let cardContainer = document.querySelector(".cardContainer");
   try {
-    let a = await fetch(
-      `https://fazaleammar.github.io/Spotify/songs/${folder}/info.json`
-    );
+    let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
     let json = await a.json();
 
     cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
