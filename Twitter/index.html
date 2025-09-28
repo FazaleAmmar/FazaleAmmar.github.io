@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>X(Twitter).com</title>
+  </head>
+  <body class="bg-black text-white">
+    <div
+      class="container lg:w-[100%] md:w-[85%] flex mx-auto sm:mx-0 lg:mx-auto md:mx-[12%]"
+    >
+      <!-- NavBar -->
+
+      <div class="first w-[20%] sm:w-[14%] lg:w-[70%]">
+        <div class="logo">
+          <a href="/">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              class="invert m-auto w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk hover:cursor-pointer"
+            >
+              <g>
+                <path
+                  d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <div
+          class="sideBar flex justify-center md:justify-end relative h-screen"
+        >
+          <ul class="flex flex-col text-xl space-y-7 md:space-x-7 mt-5">
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <span class="material-symbols-outlined"> home </span>
+              <span class="hidden md:block">Home</span>
+            </li>
+            <li
+              class="flex justify-start items-cente gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <span class="material-symbols-outlined"> search </span>
+              <span class="hidden md:block">Search</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <span class="material-symbols-outlined"> notifications </span>
+              <span class="hidden md:block">Notifications</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <span class="material-symbols-outlined"> mail </span>
+              <span class="hidden md:block">Mail</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <svg
+                class="invert"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="26"
+                height="26"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M18.542 30.532l15.956-11.776c.783-.576 1.902-.354 2.274.545 1.962 4.728 1.084 10.411-2.819 14.315-3.903 3.901-9.333 4.756-14.299 2.808l-5.423 2.511c7.778 5.315 17.224 4 23.125-1.903 4.682-4.679 6.131-11.058 4.775-16.812l.011.011c-1.966-8.452.482-11.829 5.501-18.735C47.759 1.332 47.88 1.166 48 1l-6.602 6.599V7.577l-22.86 22.958M15.248 33.392c-5.582-5.329-4.619-13.579.142-18.339 3.521-3.522 9.294-4.958 14.331-2.847l5.412-2.497c-.974-.704-2.224-1.46-3.659-1.994-6.478-2.666-14.238-1.34-19.505 3.922C6.904 16.701 5.31 24.488 8.045 31.133c2.044 4.965-1.307 8.48-4.682 12.023C2.164 44.411.967 45.67 0 47l15.241-13.608"
+                ></path>
+              </svg>
+              <span class="hidden md:block">Grok</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <i class="fa-solid fa-user"></i>
+              <span class="hidden md:block">Profile</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="white"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="11"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <circle cx="9" cy="12" r="1.5" fill="white" />
+                <circle cx="12" cy="12" r="1.5" fill="white" />
+                <circle cx="15" cy="12" r="1.5" fill="white" />
+              </svg>
+              <span class="hidden md:block">Menu</span>
+            </li>
+            <li
+              class="flex justify-start items-center gap-1 hover:cursor-pointer active:font-bold"
+            >
+              <span class="material-symbols-outlined"> add_circle </span>
+              <span class="hidden md:block">Create</span>
+            </li>
+            <button
+              class="bg-blue-400 hidden md:block md:w-28 p-2 rounded-xl outline-0 hover:bg-blue-500 cursor-pointer active:bg-blue-600"
+            >
+              Post
+            </button>
+          </ul>
+          <div
+            class="id fixed bottom-1 w-50 justify-center items-center flex gap-1 hover:cursor-pointer md:scale-75"
+          >
+            <div class="profile">
+              <img
+                src="images/profile.jpg"
+                alt="Profile_Ammar"
+                class="w-10 rounded-[50%]"
+              />
+            </div>
+            <div class="nameContainer hidden md:block">
+              <div class="name flex gap-5 items-center justify-between">
+                Fazal e Ammar
+                <div
+                  class="icon cursor-pointer h-5 w-5 flex items-center justify-center hover: p-2 rounded-[50%] hover:bg-gray-800"
+                >
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+              <div class="userName text-sm text-gray-500">@fazal_e_ammar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+
+      <div
+        class="second w-[80%] md:w-full border-gray-500 border border-y-black"
+      >
+        <div
+          class="forNav flex items-center justify-between px-2 border border-y-gray-700 border-x-0 p-1 border-t-0 sticky top-0 bg-transparent backdrop-blur-md z-10"
+        >
+          <div class="forYou flex justify-evenly items-center w-100">
+            <h2 class="font-bold hover:cursor-pointer">For You</h2>
+            <h2 class="font-bold hover:cursor-pointer">Following</h2>
+          </div>
+          <i class="fa-solid fa-gear hover:cursor-pointer"></i>
+        </div>
+
+        <div
+          class="uploadPost flex items-start justify-between h-25 px-3 border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div
+            class="pic hidden md:flex items-start justify-center h-full pt-2"
+          >
+            <img
+              src="images/profile.jpg"
+              alt="profile"
+              class="w-10 rounded-[50%] hover:cursor-pointer"
+            />
+          </div>
+          <div
+            class="writeContent h-full w-80 flex flex-col justify-between pt-2 pl-2"
+          >
+            <div class="contentInput">
+              <input
+                type="text"
+                name="content"
+                placeholder="What's Happening?!"
+                class="outline-none"
+              />
+            </div>
+            <div
+              class="contentOptions flex gap-2 items-center justify-start text-[13px] p-2 text-blue-700"
+            >
+              <i class="fa-regular fa-image hover:cursor-pointer"></i>
+              <i class="fa-solid fa-list-ul hover:cursor-pointer"></i>
+              <i class="fa-regular fa-face-smile hover:cursor-pointer"></i>
+              <i class="fa-regular fa-calendar-days hover:cursor-pointer"></i>
+              <i class="fa-solid fa-location-dot hover:cursor-pointer"></i>
+            </div>
+          </div>
+          <div class="postBtn h-full flex items-end">
+            <button
+              class="bg-blue-400 w-16 lg:w-20 p-1 rounded-4xl outline-0 mb-2 hover:bg-blue-500 active:bg-blue-600 hover:cursor-pointer"
+            >
+              Post
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile4.jpg"
+                alt="profile"
+                class="w-full rounded-[50%] hover:cursor-pointer"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Nisha Gupta
+                <span class="text-gray-500">@nishagupta</span>
+              </div>
+              <div class="postName text-[12px]">
+                The Calm Power of Nature: Why Green Spaces Heal the Mind
+              </div>
+            </div>
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post1.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">200k</span>
+            </div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile5.jpg"
+                alt="profile"
+                class="w-full rounded-[50%] hover:cursor-pointer"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Aditi Mehta
+                <span class="text-gray-500">@aditimehta</span>
+              </div>
+              <div class="postName text-[12px]">
+                Discovering Beauty in the Small Details of the Natural World
+              </div>
+            </div>
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post2.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">200k</span>
+            </div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="postCard border border-y-gray-700 border-x-0 p-1 border-t-0"
+        >
+          <div class="cardTitle flex justify-evenly py-3">
+            <div class="cardProfile pt-2 w-10">
+              <img
+                src="images/profile6.jpg"
+                alt="profile"
+                class="w-full rounded-[50%] hover:cursor-pointer"
+              />
+            </div>
+            <div
+              class="cardName text-sm flex flex-col items-start justify-center w-60 md:w-80 gap-1.5"
+            >
+              <div class="profileName font-bold text-sm">
+                Abhishek Kumar
+                <span class="text-gray-500">@abhishekkumar</span>
+              </div>
+              <div class="postName text-[12px]">
+                Exploring the Infinite Wonders of Our Galaxy
+              </div>
+            </div>
+            <div
+              class="cardMenu hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%] hover:cursor-pointer"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="cardImg m-6 flex items-center justify-end">
+            <img src="images/post3.jpg" alt="post" class="rounded-2xl w-110" />
+          </div>
+          <div
+            class="cardFooter text-gray-700 font-thin flex align-center justify-between px-4"
+          >
+            <div class="one hover:cursor-pointer">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="two hover:cursor-pointer">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="three hover:cursor-pointer">
+              <i
+                class="fa-regular fa-heart hover:text-red-500 transition-all duration-200"
+              ></i>
+            </div>
+            <div class="four hover:cursor-pointer">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="text-sm">220k</span>
+            </div>
+
+            <div class="cardFooterLast flex justify-end">
+              <div class="five hover:cursor-pointer">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="six hover:cursor-pointer">
+                <i class="fa-regular fa-share-from-square"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggestions  -->
+
+      <div class="third w-full ml-1 lg:ml-10 md:flex flex-col gap-5 hidden">
+        <div
+          class="input flex items-center relative w-0 lg:w-50 h-10 hover:cursor-pointer"
+        >
+          <span
+            class="material-symbols-outlined scale-50 text-gray-500 absolute left-2 active:bg-black active:text-white"
+          >
+            search
+          </span>
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Here"
+            class="text-gray-400 bg-[#2a2a2d] text-[10px] px-10 py-1.5 rounded-2xl w-60 outline-none box-border focus:bg-black focus:text-white focus:border focus:border-white"
+          />
+        </div>
+
+        <div
+          class="subscription bg-[#16181C] h-30 w-48 lg:w-60 rounded-2xl flex flex-col justify-evenly items-start px-5"
+        >
+          <h2 class="font-extrabold text-[12px] lg:text-[16px]">
+            Subscribe To Premium
+          </h2>
+          <p class="text-[8px] lg:text-[10px]">
+            Subscribe to unlock new features and if eligible , recieve a share
+            of ads revenue.
+          </p>
+          <button
+            class="bg-blue-400 w-28 p-1 rounded-4xl outline-0 hover:bg-blue-500 hover:cursor-pointer active:bg-blue-600"
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <div
+          class="happen h-70 w-48 lg:w-60 z-10 rounded-2xl flex flex-col bg-[#16181C] items-center overflow-hidden"
+        >
+          <h2 class="font-bold lg:font-extrabold m-3">What’s Happening</h2>
+
+          <div
+            class="firstHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="title lg:font-bold text-[10px]">
+                Menswear Fashion Weeks
+              </div>
+              <div class="titleInfo text-[9px] text-gray-500">
+                Fashion . LIVE
+              </div>
+            </div>
+            <div class="image w-17 h-10 rounded">
+              <img
+                src="images/suggestions.jpg"
+                alt="Fashion Image"
+                class="rounded"
+              />
+            </div>
+          </div>
+          <div
+            class="secondHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="titleInfo text-[9px] text-gray-500">
+                Trending in Pakistan
+              </div>
+              <div class="title lg:font-bold text-[10px]">#PAKvsIND</div>
+              <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
+            </div>
+            <div
+              class="icon hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%]"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div
+            class="thirdHappen flex items-center justify-between px-3 lg:px-5 w-full hover:cursor-pointer hover:bg-gray-800"
+          >
+            <div class="content h-16 flex flex-col justify-center">
+              <div class="titleInfo text-[9px] text-gray-500">
+                Trending in Pakistan
+              </div>
+              <div class="title lg:font-bold text-[10px]">#PAKvsIND</div>
+              <div class="titleInfo text-[9px] text-gray-500">2,577 posts</div>
+            </div>
+            <div
+              class="icon hover:bg-gray-600 flex items-center justify-center h-4 w-4 p-3 hover:rounded-[50%]"
+            >
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="show w-full text-start pl-3">
+            <button
+              class="text-blue-500 outline-none border-0 text-[10px] cursor-pointer"
+            >
+              Show More....
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="follow flex flex-col bg-[#16181C] w-48 lg:w-60 rounded-2xl h-50"
+        >
+          <h2 class="lg:font-extrabold m-3">What to follow</h2>
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile1.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent hidden lg:block">
+              <div class="name font-bold text-[10px]">Disha Patani</div>
+              <div class="userName text-[9px] text-gray-500">@disha_patani</div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile2.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent hidden lg:block">
+              <div class="name font-bold text-[10px]">Fazal e Ammar</div>
+              <div class="userName text-[9px] text-gray-500">
+                @fazal_e_ammar
+              </div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="ids flex justify-evenly my-1 hover:cursor-pointer">
+            <div class="profilePic w-8 h-8">
+              <img
+                src="images/profile3.jpg"
+                alt="Profile1"
+                class="w-full object-cover rounded-md"
+              />
+            </div>
+            <div class="profileContent hidden lg:block">
+              <div class="name font-bold text-[10px]">Ranbeer Kapur</div>
+              <div class="userName text-[9px] text-gray-500">
+                @ranbeer_kapur
+              </div>
+            </div>
+            <button
+              class="bg-white w-20 rounded-4xl p-0 h-8 outline-0 text-black text-[10px] font-bold hover:cursor-pointer hover:opacity-50"
+            >
+              Follow
+            </button>
+          </div>
+
+          <div class="show w-full text-start pl-3">
+            <button
+              class="text-blue-500 outline-none border-0 text-[10px] cursor-pointer"
+            >
+              Show More....
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
